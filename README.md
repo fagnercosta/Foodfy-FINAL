@@ -46,8 +46,12 @@ Desáfio Final Launchbase - Rocketseat
 
   ```
   
-  Este passo, pode ser realizado também diretamente com as ferramentas Postbird ou pgAdmin
-  
+  Este passo, pode ser realizado também diretamente com as ferramentas Postbird ou pgAdmin. 
+  ```bash
+  Importante
+  Para criar as tabelas no banco, execute no servidor de banco de dados os scripts disponíveis no arquivo  /database.sql. 
+  Leia as instruções contidas no arquivo.
+  ```
 
 4. Credenciais de acesso ao banco
   
@@ -68,7 +72,7 @@ Desáfio Final Launchbase - Rocketseat
 });
   ```
 
-5. Após criar o banco o configurar o arquivo (db.js) e criar o banco, execute o arquivo  seed.js. Isto irá fazer uma carga inial de dados Ficticios no sistema.
+5. Após criar o banco e configurar o arquivo (db.js), execute o arquivo  seed.js. Isto irá fazer uma carga inial de dados Ficticios no sistema.
   ```bash
   node .\seed.js
  ```
@@ -76,9 +80,15 @@ Desáfio Final Launchbase - Rocketseat
   6. Inicie o servidor.
 
 
+  
+  7. Acessando o sistema no navegador
+  
   ```bash
-  npm start
+  http://localhost:1000
   ```
+  
+  
+  
   
   
 
