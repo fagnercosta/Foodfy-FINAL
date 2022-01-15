@@ -13,7 +13,8 @@ Desáfio Final Launchbase - Rocketseat
 - [PostgreSQL](https://www.postgresql.org/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 - [Faker.js](https://github.com/marak/Faker.js/)
-
+- [Mailtrap](https://mailtrap.io)
+   
   
 <p>  </h2>Como usar ?</h2>
    
@@ -92,6 +93,36 @@ Desáfio Final Launchbase - Rocketseat
  <h1 align="center">
     <img src="https://github.com/fagnercosta/Foodfy-FINAL/blob/main/public/img/HomePage.png?raw=true"/>
 </h1>
+
+<h2>Acessando a área adminstrativa</h2>
+<p>  
+     Para acessar a área adminstrativa, consulte na tabela users no banco de dados os usuários criado. O login do usuário é o e-mail e a senha padrão é '12345'
+   
+</p>
+   
+<h1 align="center">
+   Serviço de E-mail
+</h1>
+<p>
+   Para usar o serviço de e-mail do MAILTRAP para recuperação de senha e criação de usuários, edite o arquivo /src/lib/mailer.js colocando as suas credencias.
+  
+   <p> <a href="https://mailtrap.io/"> Mailtrap</a> </p>
+  
+   ```bash
+      const nodemailer = require('nodemailer');
+
+
+      module.exports =  nodemailer.createTransport({
+          host: "smtp.mailtrap.io",
+          port: 2525,
+          auth: {
+            user: "YOU USER",
+            pass: "YOU PASSWORD"
+          }
+      });
+  ```
+  
+</p>
   
   
   
