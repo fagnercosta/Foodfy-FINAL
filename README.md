@@ -73,7 +73,7 @@ Desáfio Final Launchbase - Rocketseat
 });
   ```
 
-5. Após criar o banco e configurar o arquivo (db.js), execute o arquivo  seed.js. Isto irá fazer uma carga inial de dados Ficticios no sistema.
+5. Após criar o banco e configurar o arquivo (db.js), execute o arquivo  seed.js. Isto irá fazer uma carga inicial de dados Ficticios no sistema.
   ```bash
   node .\seed.js
  ```
