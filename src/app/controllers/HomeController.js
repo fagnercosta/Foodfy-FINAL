@@ -92,7 +92,7 @@ module.exports = {
             }     
             return res.render("home/recipes",{recipes:recipesList, pagination, filter});
         } catch (error) {
-            console.err("ERROR:"+error);
+            console.error("ERROR:"+error);
             return res.render("home/recipes",{
                 error:"Erro ao listar receitas",
                 recipes:recipesList, 

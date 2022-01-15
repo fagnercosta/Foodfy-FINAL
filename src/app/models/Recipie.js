@@ -116,7 +116,9 @@ module.exports = {
             SELECT recipes.*, ${totalQuery},chefs.name AS chef_name 
             FROM recipes
             LEFT JOIN chefs ON(recipes.chef_id = chefs.id) 
-            ${filterQuery} LIMIT $1 OFFSET $2`
+            ${filterQuery}  ORDER BY created_at DESC
+            LIMIT $1 OFFSET $2
+            `
 
         console.log("Consulta ::"+query);
        

@@ -58,7 +58,7 @@ module.exports = {
         return dataBase.query(`
             SELECT recipes.*
                 FROM recipes
-                WHERE chef_id = $1`, [id]);
+                WHERE chef_id = $1 ORDER BY updated_at`, [id]);
     },
 
 

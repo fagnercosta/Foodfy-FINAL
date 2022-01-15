@@ -9,8 +9,6 @@ const User = require('../models/User')
 module.exports = {
     async index(req,res){
 
-
-
         try {
 
             let result = await User.all();
