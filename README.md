@@ -30,7 +30,7 @@ Desáfio Final Launchbase - Rocketseat
 1. Clonar este repositório
 
   ```bash
-  git https://github.com/fagnercosta/Foodfy-FINAL.git
+  git clone https://github.com/fagnercosta/Foodfy-FINAL.git
  ```
 
 2. Instalar as depenencias [Entre a pasta raiz do projeto] e execute o comando
