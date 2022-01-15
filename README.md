@@ -15,7 +15,7 @@ Desáfio Final Launchbase - Rocketseat
 - [Faker.js](https://github.com/marak/Faker.js/)
 
   
-<p>  Como usar ?</h2>
+<p>  </h2>Como usar ?</h2>
    
 
  <h4> Para executar o projeto voçe precisa das seguinte ferramentas instaladas:</h4>
@@ -86,6 +86,12 @@ Desáfio Final Launchbase - Rocketseat
   ```bash
   http://localhost:1000
   ```
+  
+ <h1 align="center">
+  Resultado
+ <h1 align="center">
+    <img src="https://github.com/fagnercosta/Foodfy-FINAL/blob/main/public/img/HomePage.png?raw=true"/>
+</h1>
   
   
   
