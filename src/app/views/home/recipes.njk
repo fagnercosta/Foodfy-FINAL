@@ -1,0 +1,77 @@
+
+{% extends "layout.njk" %}
+
+    {% block header %}
+        <header>
+                 <div class="header-content">
+                    <div class="logo">
+                        <a href="/"><img src="/img/logo.png" alt=""></a>
+                    </div>
+                
+                    <div class="links" >                
+                        <a href="/about">Sobre</a>
+                        <a href="/recipes">Receitas</a>
+                        <a href="/chefs">Chefs</a>
+                        <a href="/admin/users/login">Entrar</a>
+                    </div>
+
+                    <div class="filter-recipies">
+                            <form action="/recipes" method="GET">
+                                <input type="text"
+                                    name="filter"
+                                    value="{{filter}}"
+                                    placeholder="Buscar receitas...">
+
+                                <button type="submit">Filtrar</button>
+                            </form>
+                    </div>
+
+                                
+                                    
+                                
+                 </div>   
+
+         </header>             
+  {% endblock %}
+
+  {% block head %}
+
+  {% endblock %}
+
+  {% block content%}
+            
+            <div class="header-filter">
+                {% if filter %}
+                    <h1>Buscando por: "{{filter}}"</h1>
+                {% endif %}      
+            </div>
+        
+            <div class="cards" id="{{item.id}}">
+                {% for item in recipes %}
+                    <div class="card"  id="{{item.id}}">
+                        <img src="{{item.image}}" alt="">
+                        <h1>{{item.title}}</h1>
+                        <p>por {{item.chef_name}}</p>
+                    </div>
+                {% endfor %}
+             
+            </div>
+
+            <div class="pagination"
+                    data-page = {{pagination.page}}
+                    data-total = {{pagination.total}}
+                     >
+
+                    <span class="result-filtered">
+                    
+                    </span>
+                    
+            </div>
+        
+        
+
+        <script src="/script.js"></script>
+
+  {% endblock %}
+
+ 

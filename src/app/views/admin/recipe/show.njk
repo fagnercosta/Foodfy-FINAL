@@ -1,0 +1,81 @@
+
+{% extends "admin/layout.njk" %}
+
+{% block content%}
+      <main>
+            <section>
+                  <div class="admin-form-header">
+                              <h1>Receita:{{recipe.title}}</h1>
+                              {% if session.isAdmin or session.userId===recipe.user_id %}
+                                     <a href="/admin/recipes/{{recipe.id}}/edit" class="btn-edit">Editar Receita</a>
+                              {% endif %}
+                             
+                  </div>
+                  <div class="main-content">
+
+                        <div class="photos-recipes">
+                              <div class="highlight">
+                                    <img src="{{files[0].src}}" alt="" class="highlight">
+                              </div>
+                              
+                              <div class="photos-recipes-gallery">
+                                    {% for image in files %}
+                                                <img 
+                                                      src="{{image.src}}" 
+                                                      alt="{{image.name}}"
+                                                      {% if loop.index0 == 0 %}
+                                                            class="active"
+                                                      {% endif %}
+                                                      onclick="ImageGallery.setImage(event)">
+                                    {% endfor %}
+                              </div>
+                        </div>
+                        <div class="recipie-header">
+                              <h1>{{recipe.title}}</h1>
+                              <p>{{recipe.author}}</p>
+
+                        </div>
+
+                        <div class="recipe-content">
+                              
+                              <div class="recipie-ingredients-title ">
+                                    <h2>Ingredientes</h2>
+                              </div>
+
+                              <div class="recipie-ingredients">
+                                    <ul>
+                                           {% for item in recipe.ingredients %}
+                                                 <li>{{item}}</li>
+                                           {% endfor %}
+                                    </ul>
+                              </div>
+
+                              <div class="recipie-prepared-title">
+                                    <h2>Ingredientes</h2>
+                              </div>
+
+                              <div class="recipie-prepared">
+                                    <ul>
+                                           {% for item in recipe.preparation %}
+                                                 <li>{{item}}</li>
+                                           {% endfor %}
+                                    </ul>
+                              </div>
+
+                              <div class="aditional-info-title">
+                                    <h2>Informações adicionais</h2>
+                              </div>
+
+                               <div class="aditional-info">
+                                    <p>{{recipe.information}}</p>
+                              </div>
+                              
+                        </div>
+                  </div>
+            </section>
+            
+      </main>
+      <script src="/script.js"></script>
+            
+      
+{% endblock %}

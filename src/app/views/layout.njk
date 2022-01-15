@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    {% include 'parts/styles.njk' %}
+            
+            
+    {% block head%}
+
+    {%  endblock%}
+            
+    </head>
+
+    <body>
+    
+        {% include 'parts/messages.njk' %}
+
+        <main>
+                {% block header %}
+                    <header>
+                            <div class="header-content">
+                                <div class="logo">
+                                    <a href="/"><img src="/img/logo.png" alt=""></a>
+                                </div>
+                
+                                <div class="links" >                
+                                    <div class="actions">
+                                        <a href="/about">Sobre</a>
+                                        <a href="/recipes">Receitas</a>
+                                        <a href="/chefs">Chefs</a>
+                                    </div>
+
+                                    <div class="login">
+                                        <a href="/admin/users/login">Entrar</a>
+                                    </div>
+                                </div>
+  
+                                
+                            </div>   
+
+                    </header>
+                {% endblock %}
+        
+        
+                {% block content %}
+
+                {% endblock %}
+
+                
+                <footer class="template-footer" >
+                    <p>Todos direitos reservados, receitas Foodfy.</p>       
+                </footer>
+        </main>
+        
+
+
+
+    </body>
+    
+
+    
+</html>

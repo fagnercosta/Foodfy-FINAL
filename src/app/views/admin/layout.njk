@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/login.css">
+     {% include 'parts/styles.njk' %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block head %}
+        <title>Foodfy</title>
+    {% endblock %}
+
+</head>
+<body>
+    {% include 'parts/messages.njk' %}
+    <main>
+            {% block header %}
+                 <header class="admin">
+
+                    <div class="dashboard admin-header-container">
+
+                        <div class="logo-admin dashboard">
+                            <a href="/admin/">
+                                <img src="/img/logo-admin.png" alt="">
+                            </a> 
+
+                            <div class="links">
+                                <a href="/admin/recipes">RECEITAS</a>
+                                <a href="/admin/chefs">CHEFS</a>
+                                {% if session.isAdmin %}
+                                    <a href="/admin/users">USUÁRIOS</a>
+                                {% endif %} 
+                                <a href="/admin/users/profile">MINHA CONTA</a>
+                                
+                            </div>
+                        </div>    
+
+                        <div class="logout">
+                                <a href="/admin/users/logout">SAIR</a>
+                        </div>
+                    
+                    </div>
+
+                    
+                </header>
+
+                    
+            </header>
+            {% endblock %}
+
+            {% block content %}
+                
+            {% endblock %}
+        
+
+            
+
+        
+    </main>
+
+    <footer class="template-footer" >
+                        <p>Todos direitos reservados, receitas Foodfy.</p>       
+    </footer>
+
+    <script src="/scripts/menuItem.js"></script>
+    <script src="/scripts/alerta.js"></script>
+    
+</body>
+</html>

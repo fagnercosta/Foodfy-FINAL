@@ -1,0 +1,29 @@
+{% extends "admin/layout.njk" %}
+
+{% block content%}
+      <div class="admin-home-containter profile">
+              <form action="/admin/users" method="POST" >
+                    <div class="profile admin-form-header">
+                              <h1>Criar Usuário</h1>
+                              <div class="actions">
+                                    <button type="submit">Salvar</button>
+                                    <a href="">Cancelar</a>
+                              </div>
+                              
+                    </div>
+
+            
+                    {% include "user/parts/user-fields.njk" %}
+                            
+                        
+            </form>                  
+      </div>
+  
+      <script src="/script.js"> 
+      
+      </script>
+      
+      
+      
+{% endblock %}
+

@@ -1,0 +1,87 @@
+
+{% extends "admin/layout.njk" %}
+
+{% block header %}
+    <header class="admin">
+
+                    <div class="dashboard admin-header-container">
+
+                        <div class="logo-admin dashboard">
+                            <a href="/admin/">
+                                <img src="/img/logo-admin.png" alt="">
+                            </a> 
+
+                            <div class="links">
+                                <a href="/admin/recipies">RECEITAS</a>
+                                <a href="/admin/chefs">CHEFS</a>
+                                <a href="/admin/chefs">USUÁRIOS</a>
+                            </div>
+                        </div>    
+
+                        <div class="logout">
+                                <a href="">SAIR</a>
+                        </div>
+                    
+                    </div>
+
+                    
+    </header>
+{% endblock %}
+
+{% block content%}
+      <div class="admin-home-containter" style="position: relative;">
+              <form id="form-delete-user" action="/admin/users?_method=DELETE" method="POST" style="position: absolute; top: 30px; right:155px">
+                   
+                              <input type="hidden" name="id" value="{{user.id}}">
+                              <button id="btn-delete" type="submit">Deletar</button>
+                   
+
+                   
+                        
+             </form> 
+
+              <form action="/admin/users/update?_method=put" method="POST">
+                    <div class="profile admin-form-header">
+                              <h1>Criar Usuário</h1>
+                              <div class="actions">
+                                    <button type="submit">Salvar</button>
+                                    
+                              </div>
+                              
+                    </div>
+
+                    <input type="hidden" name="id" value="{{user.id}}">
+                    {% include "user/parts/user-fields.njk" %} 
+                        
+            </form>                  
+      </div>
+
+      <script src="/script.js"> 
+      
+      </script>
+
+      <script>
+
+                const formDelete = document
+                    .querySelector('#form-delete-user')
+                    .addEventListener('submit', function (e) {
+                        var formDelete = this;
+
+                        e.preventDefault(); // <--- prevent form from submitting
+
+                        Swal
+                            .fire({title: 'Deseja apagar usuário ?', showCancelButton: true, confirmButtonText: 'Excluir'})
+                            .then((result) => {
+                                /* Read more about isConfirmed, isDenied below */
+                                if (result.isConfirmed) {
+                                    formDelete.submit();
+                                    
+                                    
+                                } 
+                            })
+                    });
+    </script>
+      
+      
+      
+{% endblock %}

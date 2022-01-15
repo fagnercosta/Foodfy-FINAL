@@ -1,0 +1,25 @@
+{% extends "admin/layout.njk" %}
+
+{% block content %}
+        <div class="admin-home-containter">
+                <div class="ttlie-admin-recipie">
+                    <h1>Gerenciar Receitas</h1>
+                </div>
+
+                <div class="cards-admin-home-container">
+                        {% for item in recipies %}
+                            <div class="card-admin">
+                                <div class="img-recipie">
+                                    <img src="{{item.image}}" alt="">
+                                </div>
+
+                                <div class="card-details">
+                                    <h3>{{item.title}}</h3>
+                                    <span>{{item.author}}</span>
+                                    <a href="/admin/recipies/{{item.id}}">Visualizar</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                <div>                 
+        </div>
+{% endblock %}

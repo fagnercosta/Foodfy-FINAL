@@ -1,0 +1,58 @@
+
+{% extends "admin/layout.njk" %}
+
+{% block content%}
+      <main>
+            <section>
+                  <div class="admin-form-header">
+                              <h1>Chefe: {{chef.name}}</h1>
+                              {% if session.isAdmin %}
+                                  <a href="/admin/chefs/{{chef.id}}/edit" class="btn-edit">Editar Chefe</a>
+                              {% endif %}
+                              
+                  </div>
+                  <div class="chefs-content">
+                       
+                       <div class="chefs-infos">
+                              <img src="{{files[0].src}}" alt="">
+                              <h2>{{chef.name}}</h2>
+                              <span>{{chef.total_recipes}} receita (s)</span>
+                       </div>
+
+                        
+                  </div>
+
+                  <div class="main-container">
+                        <div class="admin-form-header">
+                              <h1>Receitas</h1>
+                        
+                       </div>
+                </div>
+
+                <div class="cards-admin-home-container recipies-chefs">
+              
+                        {% for item in recipes %}
+                     
+                            <div class="card-admin">
+                                <div class="img-recipie">
+                                    <img src="{{item.image}}" alt="">
+                                </div>
+
+                                <div class="card-details">
+                                    <h3>{{item.title}}</h3>
+                                    <span>{{chef.name}}</span>
+                                    <a href="/admin/recipes/{{item.id}}">Visualizar</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                <div>                 
+             </div>
+
+                  
+
+            </section>
+            
+      </main>
+            
+      
+{% endblock %}

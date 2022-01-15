@@ -1,0 +1,52 @@
+
+{% extends "layout.njk" %}
+
+{% block content%}
+      <main>
+            <section>
+                  
+                  <div class="chefs-content">
+                       
+                       <div class="chefs-infos">
+                              <img src="{{files[0].src}}" alt="">
+                              <h2>{{chef.name}}</h2>
+                              <span>{{chef.total_recipes}} receita (s)</span>
+                       </div>
+
+                        
+                  </div>
+
+                  <div class="main-container">
+                        <div class="admin-form-header">
+                              <h1>Receitas</h1>
+                        
+                       </div>
+                </div>
+
+                <div class="cards-admin-home-container recipies-chefs">
+              
+                        {% for item in recipes %}
+                     
+                            <div class="card-admin">
+                                <div class="img-recipie">
+                                    <img src="{{item.image}}" alt="">
+                                </div>
+
+                                <div class="card-details">
+                                    <h3>{{item.title}}</h3>
+                                    <span>{{chef.name}}</span>
+                                    <a href="/recipes/{{item.id}}">Visualizar</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                <div>                 
+             </div>
+
+                  
+
+            </section>
+            
+      </main>
+            
+      
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "admin/layout.njk" %}
+
+
+
+{% block content %}
+        <div class="admin-home-containter">
+                <div class="ttlie-admin-recipie">
+                    {% if session.isAdmin %}
+                        <h1>Gerenciar Receitas</h1>
+                    {% endif %}
+
+                    {% if not session.isAdmin %}
+                        <h1>Receitas</h1>
+                    {% endif %}
+                    
+                    {% if session.userId %}
+                        <a href="/admin/recipes/create" class="btn-new">Nova Receita</a>
+                    {% endif %}
+                    
+                </div>
+
+                <div class="cards-admin-home-container">
+                        {% for item in recipes %}
+                            <div class="card-admin">
+                                <div class="img-recipie">
+                                    <img src="{{item.image}}" alt="">
+                                </div>
+
+                                <div class="card-details">
+                                    <h3>{{item.title}}</h3>
+                                    <span>por {{item.chef_name}}</span>
+                                    <a href="/admin/recipes/{{item.id}}">Visualizar</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                </div> 
+
+                
+
+                              
+        </div>
+
+        <div class="pagination"
+                    data-page = {{pagination.page}}
+                    data-total = {{pagination.total}} >
+        </div>
+        
+         
+        <script src="/script.js"></script>
+{% endblock %}
+

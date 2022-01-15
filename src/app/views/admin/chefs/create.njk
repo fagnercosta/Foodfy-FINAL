@@ -1,0 +1,26 @@
+
+{% extends "admin/layout.njk" %}
+
+{% block content%}
+      <div class="admin-home-containter">
+              <form action="/admin/chefs" method="POST" enctype="multipart/form-data">
+                    <div class="admin-form-header">
+                              <h1>Criando Chef</h1>
+                              <button class="btn-save" type="submit">Salvar chef</button>
+                    </div>
+
+                    {% include "admin/chefs/fields.njk" %}
+                        
+            </form>                  
+      </div>
+  
+      <script src="/script.js"> 
+      
+      </script>
+      
+      
+      
+{% endblock %}
+
+
+

@@ -1,0 +1,40 @@
+<div class="form">
+            <section class="profile details">
+
+                    <div class="item">
+                        <div>Nome</div>
+                            <div>
+                                <input 
+                                    type="text" 
+                                    name="name"
+                                    value="{{user.name}}" >
+                            </div>
+                    </div>
+
+                    <div class="item">
+                          <div>E-mail</div>
+                         
+                            <div>
+                                <input 
+                                    type="email" 
+                                    name="email"
+                                    value="{{user.email}}" >
+                            </div>
+                    </div>
+
+                    <div class="item checkbox">
+                        <div>
+                                <input 
+                                    type="checkbox" 
+                                    name="is_admin" 
+                                    value="1"
+                                    {% if user.is_admin %}
+                                        checked
+                                    {% endif %}> Administrador
+                        </div>
+                    </div>
+
+                    
+</section>
+
+

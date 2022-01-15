@@ -1,0 +1,63 @@
+
+{% extends "admin/layout.njk" %}
+
+{% block content%}
+      <div class="admin-home-containter" style="position: relative;">
+            
+              {% if session.isAdmin %}
+                  <form id="form-delete-recipe" action="/admin/recipes?_method=DELETE" method="POST" style="position: absolute;top: 20px; rigth: 800px;">
+                   
+                              <input type="hidden" name="id" value="{{recipe.id}}">
+                              <button id="btn-delete" type="submit">Deletar</button>
+                    
+
+                   
+                        
+                  </form>    
+              {% endif %}
+
+              <form action="/admin/recipes?_method=put" method="POST" enctype="multipart/form-data">
+                    <div class="admin-form-header">
+                              <h1>Editando Receita</h1>
+                              <button class="btn-save" type="submit">Salvar receita</button>
+                    </div>
+                    <input type="hidden" name="id" , value="{{recipe.id}}">
+                    {% include "admin/recipe/fields.njk" %}
+                        
+            </form>                 
+      </div>
+
+      <script src="/scripts/add_itens.js"> 
+      
+      </script>
+
+      <script src="/script.js"></script>
+
+      <script>
+
+                const formDelete = document
+                    .querySelector('#form-delete-recipe')
+                    .addEventListener('submit', function (e) {
+                        var formDelete = this;
+
+                        e.preventDefault(); // <--- prevent form from submitting
+
+                        Swal
+                            .fire({title: 'Deseja apagar a receita. Esta operação não poderá ser desfeita ?', showCancelButton: true, confirmButtonText: 'Excluir'})
+                            .then((result) => {
+                                /* Read more about isConfirmed, isDenied below */
+                                if (result.isConfirmed) {
+                                    formDelete.submit();
+                                    
+                                    
+                                } 
+                            })
+                    });
+    </script>
+      
+      
+      
+{% endblock %}
+
+
+

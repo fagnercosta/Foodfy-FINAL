@@ -1,0 +1,93 @@
+
+  {% extends "layout.njk" %} 
+
+  {% block header %}
+        <header>
+                 <div class="header-content">
+                    <div class="logo">
+                        <a href="/"><img src="/img/logo.png" alt=""></a>
+                    </div>
+                
+                    <div class="links" >                
+                        <div>
+                            <a href="/about">Sobre</a>
+                            <a href="/recipes">Receitas</a>
+                            <a href="/chefs">Chefs</a>
+                        </div>
+
+                            <div class="login">
+                                <a href="/admin/users/login">Entrar</a>
+                            </div>
+                        </div>
+
+                    <div class="filter-recipies">
+                            <form action="/recipes" method="GET">
+                                <input type="text"
+                                    name="filter"
+                                    value="{{filter}}"
+                                    placeholder="Buscar receitas...">
+
+                                <button type="submit">Filtrar</button>
+                            </form>
+                    </div>
+
+                                
+                                    
+                                
+                 </div>   
+
+         </header>             
+  {% endblock %}
+
+  {% block head %}
+
+  {% endblock %}
+
+  {% block content%}
+  
+        <main>
+            <section class="home">
+                <div class="panel">
+                    <div class="info">
+                        <div class="title">
+                            As melhores Receitas
+                        </div>
+                        <div class="description">
+                            <span>Aprenda a construir os melhores pratos
+                                com receitas criadas por profissionais
+                                do mundo inteiro.</span>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="img/chef.png" alt="">
+                    </div>
+                </div>
+        
+
+                <div class="cards-title">
+                    <span>Mais Acessadas</span>
+                </div>
+
+                <div class="cards">
+                    {% for item in recipies %}
+                        <div class="card"  id="{{item.id}}">
+                            <img src="{{item.image}}" alt="">
+                            <h1>{{item.title}}</h1>
+                            <p>{{item.chef_name}}</p>
+                        </div>
+                    {% endfor %}
+                
+                </div>
+
+            </section>
+
+            <script src="/script.js"></script>
+    </main>
+
+  {% endblock %}
+
+  
+
+        
+
+    

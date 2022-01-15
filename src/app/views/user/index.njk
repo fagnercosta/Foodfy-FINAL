@@ -1,0 +1,73 @@
+{% extends "admin/layout.njk" %}
+
+
+{% block content%}
+      <div class="admin-home-containter">
+            
+                    <div class="profile admin-form-header">
+                              <h1>Usuários</h1>
+                              <div class="actions">
+                                    <a href="/admin/users/register" class="btn-new" style="background:#6558C3">Novo</a>
+                              </div>
+                              
+                    </div>
+
+                    <div class="container-users">
+                        {% for user in users %}
+                            <div class="card-users">
+
+                                <div class="details-user">
+                                    <span>{{user.name}}</span>
+                                    <p>{{user.email}}</p>
+                                </div>
+
+                                <div class="user-actions">
+                                    <a href="/admin/users/{{user.id}}/edit">Editar</a>
+                                    <form id="form-delete-user" action="/admin/users?_method=DELETE" method="POST">
+                                        <input type="hidden" name="id" value="{{user.id}}">
+                                          {% if session.userId != user.id %}
+                                              <button>Remover</button>
+                                          {% endif %}
+                                          
+                                    </form>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        
+                </div> 
+
+            
+                              
+      </div>
+
+      
+      <script>
+
+                const formDelete = document
+                    .querySelector('#form-delete-user')
+                    .addEventListener('submit', function (e) {
+                        var formDelete = this;
+
+                        e.preventDefault(); // <--- prevent form from submitting
+
+                        Swal
+                            .fire({title: 'Deseja apagar usuário ?', showCancelButton: true, confirmButtonText: 'Excluir'})
+                            .then((result) => {
+                                /* Read more about isConfirmed, isDenied below */
+                                if (result.isConfirmed) {
+                                    formDelete.submit();
+                                    
+                                    
+                                } 
+                            })
+                    });
+    </script>
+
+    <script src="/scripts/alerta.js"></script>
+  
+      
+      
+      
+{% endblock %}
+

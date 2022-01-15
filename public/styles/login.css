@@ -1,0 +1,54 @@
+:root{
+    --button-color:#6558C3;
+}
+
+.details.login{
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+
+.admin-home-containter.login,.admin-form-header.details.login{
+    width: 500px;
+}
+
+.admin-form-header.login{
+    display: grid;
+    grid-template-columns: 100%;
+    width: 500px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.admin-form.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-form.footer a{
+    padding: 0;
+    background: none;
+    font-family:"Roboto", Helvetica-Bold;
+    font-size: 16px;
+    color: #5a5858;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.admin-form.footer button{
+    background-color: var(--button-color);
+    padding: 8px 50px;
+}
+
+
+
+
+
+
+
+
+

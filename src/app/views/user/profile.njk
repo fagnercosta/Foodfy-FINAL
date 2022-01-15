@@ -1,0 +1,31 @@
+{% extends "admin/layout.njk" %}
+
+
+{% block content%}
+      <div class="admin-home-containter profile">
+              <form  method="POST" action="/admin/users?_method=PUT" >
+                    <div class="profile admin-form-header">
+                              <h1>Bem Vindo, {{user.name}}</h1>
+                              <button type="submit">Salvar</button>
+                    </div>
+
+                    <input type="hidden" name="id" value={{user.id}}>
+                    {% include "user/parts/profile-fields.njk" %}
+                    
+                    
+
+                    
+
+                
+                        
+            </form>                  
+      </div>
+  
+      <script src="/script.js"> 
+      
+      </script>
+      
+      
+      
+{% endblock %}
+

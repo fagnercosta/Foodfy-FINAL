@@ -1,0 +1,77 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+        <header>
+                 <div class="header-content">
+                    <div class="logo">
+                        <a href="/"><img src="/img/logo.png" alt=""></a>
+                    </div>
+                
+                    <div class="links" >                
+                        <a href="/about">Sobre</a>
+                        <a href="/recipes">Receitas</a>
+                        <a href="/chefs">Chefs</a>
+                        <a href="/admin/users/login">Entrar</a>
+                    </div>
+
+                    <div class="filter-recipies">
+                            <form action="/chefs" method="GET">
+                                <input type="text"
+                                    name="filter"
+                                    value="{{filter}}"
+                                    placeholder="Buscar receitas...">
+
+                                <button type="submit">Filtrar</button>
+                            </form>
+                    </div>
+
+                                
+                                    
+                                
+                 </div>   
+
+         </header>             
+  {% endblock %}
+
+{% block content %}
+        <div class="admin-home-containter">
+                <div class="ttlie-admin-recipie">
+                    
+                </div>
+
+                <div class="cards-admin-home-container-chefs">
+                        {% for chef in chefs %}
+                            <div class="card-admin" id="{{chef.id}}">
+                                <div class="img-chef">
+                                    <img src="{{chef.src}}" alt="">
+                                </div>
+
+                                <div class="card-details">
+                                    <span>{{chef.name}}</span>
+                                    <p>{{chef.total_recipies}} Recitas</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        
+                </div> 
+
+                 <div class="pagination"
+                    data-page = {{pagination.page}}
+                    data-total = {{pagination.total}} >
+                    
+                </div>
+
+                
+
+                
+
+                               
+        </div>
+
+       
+
+         
+
+        <script src="/script.js"></script>
+{% endblock %}

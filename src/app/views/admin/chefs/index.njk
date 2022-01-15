@@ -1,0 +1,60 @@
+{% extends "admin/layout.njk" %}
+
+
+{% block content %}
+
+       
+             <div class="admin-home-containter">
+                <div class="ttlie-admin-recipie">
+                    {% if session.isAdmin %}
+                        <h1>Gerenciar Chefs</h1>
+                    {% endif %}
+
+                    {% if not session.isAdmin %}
+                        <h1>Listagem de Chefs</h1>
+                    {% endif %}
+                    
+
+                    {% if session.isAdmin %}
+                        <a href="/admin/chefs/create" class="btn-new">Novo Chefe</a>
+                    {% endif %}
+                    
+                </div>
+
+                <div class="cards-admin-home-container-chefs">
+                        {% for chef in chefs %}
+                            <div class="card-admin">
+                                <div class="img-chef">
+                                    <img src="{{chef.img}}" alt="">
+                                </div>
+
+                                <div class="card-details">
+                                    <span>{{chef.name}}</span>
+                                    <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        
+                </div> 
+
+                 <div class="pagination"
+
+                 
+                    data-page = {{pagination.page}}
+                    data-total = {{pagination.total}} >
+                    
+                </div>
+                               
+            </div>
+        
+
+        
+       
+
+       
+
+         
+
+        <script src="/script.js"></script>
+{% endblock %}

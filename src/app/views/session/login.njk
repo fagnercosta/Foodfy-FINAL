@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+{% block header %}
+        <header>
+                 <div class="header-content login-header">
+                    <div class="logo">
+                        <a href="/"><img src="/img/logo.png" alt=""></a>
+                    </div>
+                         
+                 </div>   
+
+         </header>             
+  {% endblock %}
+
+  {% extends "admin/layout.njk" %}
+
+{% block content%}
+      <div class="admin-home-containter login">
+              <form action="/admin/users/login" method="POST">
+                    <div class="login admin-form-header">
+                              <h1>Iniciar Sessão</h1>
+                    </div>
+
+                    {% include "session/login-fields.njk" %}
+
+                    <div class="footer admin-form">
+                              <a href="/admin/users/forgot-password">Perdeu sua senha?</a>
+                              <button class="btn-new">Acessar</button>
+                    </div>
+                        
+            </form>                  
+      </div>
+  
+      <script src="/script.js"> 
+      
+      </script>
+      
+      
+      
+{% endblock %}
