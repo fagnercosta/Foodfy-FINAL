@@ -47,7 +47,7 @@ Desáfio Final Launchbase - Rocketseat
 
   ```
   
-  Este passo, pode ser realizado também diretamente com as ferramentas Postbird ou pgAdmin. 
+  Este passo pode ser realizado também diretamente com as ferramentas Postbird ou pgAdmin. 
   ```bash
   Importante
   Para criar as tabelas no banco, execute no servidor de banco de dados os scripts disponíveis no arquivo  /database.sql. 
