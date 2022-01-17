@@ -96,7 +96,7 @@ Desáfio Final Launchbase - Rocketseat
 
 <h2>Acessando a área adminstrativa</h2>
 <p>  
-     Para acessar a área adminstrativa, consulte na tabela users no banco de dados os usuários criado. O login do usuário é o e-mail e a senha padrão é '12345'
+     Para acessar a área adminstrativa, consulte na tabela users no banco de dados os usuários criados. O login do usuário é o e-mail e a senha padrão é '12345'
    
 </p>
    
