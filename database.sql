@@ -1,7 +1,7 @@
---DROP SCHEMA public CASCADE;
---CREATE SCHEMA public;
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
 
---DROP DATABASE IF EXISTS foodfy;
+DROP DATABASE IF EXISTS foodfy;
 CREATE DATABASE foodfy;
 -- 
 -- Se Ja estiver criando o banco, execute os comandos a partir desse ponto

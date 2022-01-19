@@ -25,4 +25,8 @@ routes.get('/users/profile', (req,res)=>{
     return res.render("user/profile");
 });
 
+routes.get('/teste',(req,res)=>{
+    return res.render('messages/error');
+})
+
 module.exports =routes;

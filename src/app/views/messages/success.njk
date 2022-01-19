@@ -1,0 +1,37 @@
+{% extends "admin/layout.njk" %}
+
+{% block content%}
+      <div class="admin-home-containter action-sucesss">
+      
+            <div class="success-lottie">
+                
+            </div>
+
+            
+            <h2>Operação realizada com sucesso</h2>    
+            <a href="/admin/recipes">Voltar</a>
+            
+       </div>
+              
+
+      <script src="/lottie.min.js"> 
+      
+      </script>
+            <script>
+            //DOM que esta usando
+            const element = document.querySelector('.success-lottie');
+            lottie.loadAnimation({
+                container: element, // the dom element that will contain the animation
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: '/88403-success.json' // the path to the animation json
+            });
+        </script>
+      <script >
+      
+      </script>
+      
+      
+      
+{% endblock %}

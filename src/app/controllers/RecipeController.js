@@ -171,12 +171,13 @@ module.exports = {
                 });
             });
 
-            return  res.render('admin/recipe/index',{success:"Receita excluída com sucesso!"})
+            return  res.render('messages/success');
             
             
 
         } catch (error) {
             console.error(error);
+            return  res.render('messages/error');
         }
     },
     async put(req,res){

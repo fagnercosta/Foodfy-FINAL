@@ -1,0 +1,37 @@
+{% extends "admin/layout.njk" %}
+
+{% block content%}
+      <div class="admin-home-containter action-error">
+      
+            <div class="error-lottie">
+                
+            </div>
+
+            
+            <h2>Algo deu errado. Por favor, tente novamenete!</h2>    
+            <a href="/admin">Voltar</a>
+            
+       </div>
+              
+
+      <script src="/lottie.min.js"> 
+      
+      </script>
+            <script>
+            //DOM que esta usando
+            const element = document.querySelector('.error-lottie');
+            lottie.loadAnimation({
+                container: element, // the dom element that will contain the animation
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: '/9915-spinner-fail.json' // the path to the animation json
+            });
+        </script>
+      <script >
+      
+      </script>
+      
+      
+      
+{% endblock %}

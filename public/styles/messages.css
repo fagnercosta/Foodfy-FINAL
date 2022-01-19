@@ -51,3 +51,80 @@
     font-size: 18px;
     line-height: 28px;
 }
+
+
+.admin-home-containter.action-sucesss{
+    background-color: white;
+    padding: 32px 24px;
+    margin: 32px auto;
+    box-shadow: 0px 4px 8px -2px rgba(0,0,0,.6);
+    border-radius: 4px;
+    width: 40%;
+}
+
+.action-sucesss{
+    padding: 0;
+    padding-bottom: 112px;
+    text-align: center;
+    margin: auto;
+}
+
+.action-sucesss .success-lottie{
+    height: 200px;
+}
+
+.action-sucesss h2 {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    color: #6558C3;
+}
+
+.action-sucesss a{
+    
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #131316;
+    font-weight: bold;
+    margin-top: 20px;
+    
+}
+
+/**=== ERRO **===**/
+
+.admin-home-containter.action-error{
+    background-color: white;
+    padding: 32px 24px;
+    margin: 32px auto;
+    box-shadow: 0px 4px 8px -2px rgba(0,0,0,.6);
+    border-radius: 4px;
+    width: 40%;
+}
+
+.action-error{
+    padding: 0;
+    padding-bottom: 112px;
+    text-align: center;
+    margin: auto;
+}
+
+.action-error .error-lottie{
+    height: 200px;
+}
+
+.action-error h2 {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    color: #6558C3;
+}
+
+.action-error a{
+    
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #131316;
+    font-weight: bold;
+    margin-top: 20px;
+    
+}
