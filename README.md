@@ -30,7 +30,7 @@ Desáfio Final Launchbase - Rocketseat
 1. Clonar este repositório
 
   ```bash
-  git https://github.com/fagnercosta/Foodfy-FINAL.git
+  git clone https://github.com/fagnercosta/Foodfy-FINAL.git
  ```
 
 2. Instalar as depenencias [Entre a pasta raiz do projeto] e execute o comando
@@ -47,7 +47,7 @@ Desáfio Final Launchbase - Rocketseat
 
   ```
   
-  Este passo, pode ser realizado também diretamente com as ferramentas Postbird ou pgAdmin. 
+  Este passo pode ser realizado também diretamente com as ferramentas Postbird ou pgAdmin. 
   ```bash
   Importante
   Para criar as tabelas no banco, execute no servidor de banco de dados os scripts disponíveis no arquivo  /database.sql. 
@@ -73,7 +73,7 @@ Desáfio Final Launchbase - Rocketseat
 });
   ```
 
-5. Após criar o banco e configurar o arquivo (db.js), execute o arquivo  seed.js. Isto irá fazer uma carga inial de dados Ficticios no sistema.
+5. Após criar o banco e configurar o arquivo (db.js), execute o arquivo  seed.js. Isto irá fazer uma carga inicial de dados Ficticios no sistema.
   ```bash
   node .\seed.js
  ```
@@ -96,7 +96,7 @@ Desáfio Final Launchbase - Rocketseat
 
 <h2>Acessando a área adminstrativa</h2>
 <p>  
-     Para acessar a área adminstrativa, consulte na tabela users no banco de dados os usuários criado. O login do usuário é o e-mail e a senha padrão é '12345'
+     Para acessar a área adminstrativa, consulte na tabela users no banco de dados os usuários criados. O login do usuário é o e-mail e a senha padrão é '12345'
    
 </p>
    
