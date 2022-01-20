@@ -33,7 +33,7 @@ Desáfio Final Launchbase - Rocketseat
   git clone https://github.com/fagnercosta/Foodfy-FINAL.git
  ```
 
-2. Instalar as depenencias [Entre a pasta raiz do projeto] e execute o comando
+2. Instalar as dependências  [Entre a pasta raiz do projeto] e execute o comando
 
  ```bash
  npm install -y
